@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+
+<body>
+
+    <!--Navigation starts-->
+    <nav>
+        <div class="navbar">
+            <a href="#" class="logo">NICHE & NOIR AGENCY</a>
+
+
+            <!--Hamburger menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navlinks">
+                <li><a href="#">Home</a></li>
+
+                <li>
+                    <a href="#" class="submenu-toggle">services </a>
+                    <ul class="submenu">
+                        <li><a href="#">Talent respresentation</a></li>
+                        <li><a href="#">Brand partnerships & campaigns</a></li>
+                        <li><a href="#">content production & optimization</a></li>
+                        <li><a href="#">join as a Brand</a></li>
+                        <li><a href="#">Join as a Creator</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="submenu-toggle">gallery </a>
+                    <ul class="submenu">
+                        <li><a href="#">Meet the vision behind the agency.</a></li>
+                        <li><a href="#">featured projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <li>
+
+    </nav>
+    <!--Navigation Ends-->
+    <center>
+        <h1>Contact Us</h1>
+    </center>
+
+    <div class="container">
+        <form>
+            <input id="fname" type="text"  name="firstname" placeholder="your name..">
+            <input id="lname" type="text" name="Lastname" placeholder="Your last name..">
+            <input id="email" type="email" name="email" placeholder="Your email..">
+            <textarea id="subject" name="subject" placeholder="write something.." 
+            style="height:200px"></textarea>
+            
+              
+            <center><input id="submit" type="submit" value="Submit"></center>
+        </form>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-logo">
+        <h2>Niche & Noir agency</h2>
+        <p>Create. Connect. Conquer.</p>
+    </div>
+
+    <div class="footer-links">
+        <h3>quick links</h3>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">contact us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p> 54 Adelaide Tambo Dr, Durban North, 4051</p>
+        <p> (+27) 696416790</p>
+        <p> hello@nicheandnoir.com</p>
+        <div class="footer-socials">
+            <a href="#">instagram</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Facebook</a>
+        </div>
+    </div>
+
+    <div class="footer-newsletter">
+        <h3> Legal</h3>
+        <p>Privacy policy</p>
+        <p>Terms of Service</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit"></button>
+        </form>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navlinks = document.getElementById('navlinks');
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+    // Toggle hamburger menu open/close
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navlinks.classList.toggle('open');
+    });
+
+    // Togggle submenu on  mobile tap
+
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if(window.innerWidth <= 768){
+                e.preventDefault();
+            const submenu = toggle.nextElementSibling;
+                submenu.classList.toggle('open');
+            }
+        });
+    });
+</script>
+
+</html>
